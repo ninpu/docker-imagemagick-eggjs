@@ -12,12 +12,7 @@ rm release.tar
 
 # install dependence
 echo "install dependencies"
-npm i --production --registry=https://registry.npm.taobao.org
-npm i typescript -g --registry=https://registry.npm.taobao.org
-
-# compile
-echo "compile"
-npm run tsc
+npm i egg-scripts --save
 
 # run
 echo "start"
