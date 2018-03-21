@@ -12,7 +12,7 @@ rm release.tar
 
 # install dependence
 echo "install dependencies"
-npm i egg-scripts --save
+npm i egg-scripts -g
 
 # run
 echo "start"
