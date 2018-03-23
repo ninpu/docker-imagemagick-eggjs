@@ -4,7 +4,8 @@ RUN ln -snf /usr/share/zoneinfo/Asia/Shanghai /etc/localtime && \
     echo Asia/Shanghai > /etc/timezone && \
     dpkg-reconfigure --frontend noninteractive tzdata
 
-RUN mkdir -p /usr/src/app
+RUN mkdir -p /usr/src/app && \
+    npm i egg-scripts -g
 
 WORKDIR /usr/src/app
 
