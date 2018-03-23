@@ -10,11 +10,7 @@ echo "uppackage"
 tar -xvf release.tar --strip-components=1
 rm release.tar
 
-# install dependence
-# echo "install dependencies"
-# npm i egg-scripts -g
-
 # run
 echo "start"
-egg-scripts start --port=7001 --env=default
+egg-scripts start --port=7001 --env=prod
 
