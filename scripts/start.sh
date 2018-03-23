@@ -11,8 +11,8 @@ tar -xvf release.tar --strip-components=1
 rm release.tar
 
 # install dependence
-echo "install dependencies"
-npm i egg-scripts -g
+# echo "install dependencies"
+# npm i egg-scripts -g
 
 # run
 echo "start"
