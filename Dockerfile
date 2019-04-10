@@ -12,13 +12,10 @@ RUN mkdir -p /usr/src/app && \
 
 WORKDIR /usr/src/app
 
-VOLUME /data
-
 EXPOSE 7001
 
 COPY scripts/start.sh /usr/start.sh
 
 RUN chmod 777 /usr/start.sh
-
 
 CMD ["/usr/start.sh ${APP_PATH} ${EGG_ENV}"]
