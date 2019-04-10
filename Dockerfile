@@ -1,4 +1,7 @@
-FROM node:8.10.0
+FROM node:10.15.3
+
+ENV EGG_ENV 'prod'
+ENV APP_PATH ''
 
 RUN ln -snf /usr/share/zoneinfo/Asia/Shanghai /etc/localtime && \
     echo Asia/Shanghai > /etc/timezone && \
@@ -18,4 +21,4 @@ COPY scripts/start.sh /usr/start.sh
 RUN chmod 777 /usr/start.sh
 
 
-CMD ["/usr/start.sh"]
+CMD ["/usr/start.sh ${APP_PATH} ${EGG_ENV}"]

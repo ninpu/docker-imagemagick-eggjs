@@ -1,9 +1,12 @@
 #!/bin/sh
+APP_PATH=$1
+EGG_ENV=$2
 
-# copy source
-echo "Copy file"
-ls
-cp /data/release.tar /usr/src/app/release.tar
+mkdir -p /usr/src/app
+rm -rf /usr/src/*
+
+# download bundle
+wget -c "${APP_PATH}" -O /usr/src/app/release.tar
 cd /usr/src/app
 
 echo "uppackage"
@@ -12,5 +15,5 @@ rm release.tar
 
 # run
 echo "start"
-egg-scripts start --port=7001 --env=prod
+egg-scripts start --port=7001 --env=${EGG_ENV}
 
