@@ -18,4 +18,4 @@ COPY scripts/start.sh /usr/start.sh
 
 RUN chmod 777 /usr/start.sh
 
-CMD ["/usr/start.sh", ${APP_PATH}, ${EGG_ENV}]
+CMD /usr/start.sh ${APP_PATH} ${EGG_ENV}
