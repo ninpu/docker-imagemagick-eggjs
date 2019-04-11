@@ -1,7 +1,7 @@
 #!/bin/sh
 
 mkdir -p /usr/src/app
-rm -rf /usr/src/*
+rm -rf /usr/src/app/*
 
 # download bundle
 echo "download from ${APP_PATH}"
