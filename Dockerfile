@@ -8,11 +8,6 @@ RUN ln -snf /usr/share/zoneinfo/Asia/Shanghai /etc/localtime && \
     echo Asia/Shanghai > /etc/timezone && \
     dpkg-reconfigure --frontend noninteractive tzdata
 
-# install imagemagick
-RUN apt-get update && apt-get install -y \
-    imagemagick && \
-    apt-get clean
-
 # install eggjs-scripts
 RUN mkdir -p /usr/src/app && \
     mkdir -p /usr/temp && \
