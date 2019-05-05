@@ -25,5 +25,6 @@ EXPOSE 7001
 COPY scripts/start.sh /usr/start.sh
 
 RUN chmod 777 /usr/start.sh
+RUN chmod 777 /usr/output
 
 CMD sh /usr/start.sh
