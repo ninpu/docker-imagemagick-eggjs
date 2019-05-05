@@ -10,13 +10,13 @@ RUN ln -snf /usr/share/zoneinfo/Asia/Shanghai /etc/localtime && \
 
 # install eggjs-scripts
 RUN mkdir -p /usr/src/app && \
-    mkdir -p /usr/temp && \
+    mkdir -p /usr/fonts && \
     mkdir -p /usr/output && \
     npm i egg-scripts -g
 
 WORKDIR /usr/src/app
 
-VOLUME /usr/temp
+VOLUME /usr/fonts
 
 VOLUME /usr/output
 
