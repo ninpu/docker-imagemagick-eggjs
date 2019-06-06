@@ -16,9 +16,8 @@ RUN cd /opt && \
     ./configure --prefix=/usr && \
     make && \
     make install && \
-    ldconfig /usr/local/lib && \
-    display
-
+    ldconfig /usr/local/lib
+    
 # install eggjs-scripts
 RUN mkdir -p /usr/src/app && \
     mkdir -p /usr/fonts && \
